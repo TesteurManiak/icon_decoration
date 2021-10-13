@@ -7,13 +7,13 @@ import 'test_utils/custom_golden.dart';
 
 void main() {
   group('Golden Shadows', () {
-    customGoldenTest('base test', (tester) async {
+    customGoldenTest('Shadow base widget', (tester) async {
       tester.binding.window.physicalSizeTestValue = const Size.square(352);
       await tester.pumpWidget(generateBaseApp(child: baseWidget));
       addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
     });
 
-    customGoldenTest('default with white background', (tester) async {
+    customGoldenTest('Default shadow', (tester) async {
       tester.binding.window.physicalSizeTestValue = const Size.square(100);
       await tester.pumpWidget(
         generateBaseApp(
@@ -29,7 +29,7 @@ void main() {
       addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
     });
 
-    customGoldenTest('Offset: 0, 6', (tester) async {
+    customGoldenTest('Shadow with Offset(0, 6)', (tester) async {
       tester.binding.window.physicalSizeTestValue = const Size.square(150);
       await tester.pumpWidget(
         generateBaseApp(
@@ -47,7 +47,7 @@ void main() {
       addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
     });
 
-    customGoldenTest('Offset: 3, 0', (tester) async {
+    customGoldenTest('Shadow with Offset(3, 0)', (tester) async {
       tester.binding.window.physicalSizeTestValue = const Size.square(100);
       await tester.pumpWidget(
         generateBaseApp(

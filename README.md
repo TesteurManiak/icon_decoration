@@ -1,5 +1,8 @@
 # icon_decoration
 
+[![GitHub issues](https://img.shields.io/github/issues/TesteurManiak/icon_decoration)](https://github.com/TesteurManiak/icon_decoration/issues)
+[![GitHub license](https://img.shields.io/github/license/TesteurManiak/icon_decoration)](https://github.com/TesteurManiak/icon_decoration/blob/main/LICENSE)
+
 Add decoration capabilities for the `Icon` widget with shadows, borders, gradients. This new `DecoratedIcon` widget overlap itself with the base `Icon` widget to provide a more complete decoration system through a `IconDecoration` property.
 
 ## Features

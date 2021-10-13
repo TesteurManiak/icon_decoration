@@ -18,3 +18,13 @@ jobs:
       - name: Analyze project source
         run: flutter analyze
         working-directory: ./lib
+  
+  test:
+    needs: analyze
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Collect and report coverage
+        uses: coverallsapp/github-action@v1.1.2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}

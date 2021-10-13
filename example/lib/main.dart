@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   const DecoratedIcon(
-                    child: Icon(
+                    icon: Icon(
                       Icons.lightbulb_outline,
                       color: Colors.lightBlueAccent,
                       size: 36,
@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   DecoratedIcon(
-                    child: const Icon(
+                    icon: const Icon(
                       Icons.lightbulb_outline,
                       color: Colors.lightBlueAccent,
                       size: 36,
@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
                     ]),
                   ),
                   const DecoratedIcon(
-                    child: Icon(
+                    icon: Icon(
                       Icons.lightbulb_outline,
                       color: Colors.lightBlueAccent,
                       size: 36,
@@ -69,7 +69,7 @@ class MyApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   DecoratedIcon(
-                    child: Icon(
+                    icon: Icon(
                       Icons.home,
                       color: Colors.green.shade900,
                       size: 36,
@@ -79,7 +79,7 @@ class MyApp extends StatelessWidget {
                     ]),
                   ),
                   DecoratedIcon(
-                    child: Icon(
+                    icon: Icon(
                       Icons.home,
                       color: Colors.green.shade900,
                       size: 36,
@@ -89,7 +89,7 @@ class MyApp extends StatelessWidget {
                     ]),
                   ),
                   DecoratedIcon(
-                    child: Icon(
+                    icon: Icon(
                       Icons.home,
                       color: Colors.green.shade900,
                       size: 36,
@@ -104,20 +104,20 @@ class MyApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   DecoratedIcon(
-                    child: const Icon(Icons.access_alarm, size: 36),
+                    icon: const Icon(Icons.access_alarm, size: 36),
                     decoration: IconDecoration(shadows: [
                       Shadow(
                           color: Colors.yellowAccent.shade400, blurRadius: 3),
                     ]),
                   ),
                   DecoratedIcon(
-                    child: const Icon(Icons.access_alarm, size: 36),
+                    icon: const Icon(Icons.access_alarm, size: 36),
                     decoration: IconDecoration(shadows: [
                       Shadow(color: Colors.red.shade400, blurRadius: 3),
                     ]),
                   ),
                   DecoratedIcon(
-                    child: const Icon(Icons.access_alarm, size: 36),
+                    icon: const Icon(Icons.access_alarm, size: 36),
                     decoration: IconDecoration(shadows: [
                       Shadow(color: Colors.cyanAccent.shade400, blurRadius: 3),
                     ]),
@@ -128,13 +128,13 @@ class MyApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
                   DecoratedIcon(
-                    child: Icon(Icons.favorite, size: 36),
+                    icon: Icon(Icons.favorite, size: 36),
                     decoration: IconDecoration(
                       border: IconBorder(color: Colors.yellow, width: 4),
                     ),
                   ),
                   DecoratedIcon(
-                    child: Icon(Icons.favorite, size: 36),
+                    icon: Icon(Icons.favorite, size: 36),
                     decoration: IconDecoration(
                       border: IconBorder(color: Colors.red, width: 4),
                       shadows: [
@@ -143,7 +143,7 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   DecoratedIcon(
-                    child: Icon(Icons.favorite, size: 36, color: Colors.red),
+                    icon: Icon(Icons.favorite, size: 36, color: Colors.red),
                     decoration: IconDecoration(
                       border: IconBorder(color: Colors.cyan, width: 4),
                     ),

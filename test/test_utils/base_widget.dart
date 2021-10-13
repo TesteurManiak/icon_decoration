@@ -21,7 +21,7 @@ final baseWidget = Center(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           const DecoratedIcon(
-            child: Icon(
+            icon: Icon(
               Icons.lightbulb_outline,
               color: Colors.lightBlueAccent,
               size: 36,
@@ -33,7 +33,7 @@ final baseWidget = Center(
             ),
           ),
           DecoratedIcon(
-            child: const Icon(
+            icon: const Icon(
               Icons.lightbulb_outline,
               color: Colors.lightBlueAccent,
               size: 36,
@@ -46,7 +46,7 @@ final baseWidget = Center(
             ]),
           ),
           const DecoratedIcon(
-            child: Icon(
+            icon: Icon(
               Icons.lightbulb_outline,
               color: Colors.lightBlueAccent,
               size: 36,
@@ -61,7 +61,7 @@ final baseWidget = Center(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           DecoratedIcon(
-            child: Icon(
+            icon: Icon(
               Icons.home,
               color: Colors.green.shade900,
               size: 36,
@@ -71,7 +71,7 @@ final baseWidget = Center(
             ]),
           ),
           DecoratedIcon(
-            child: Icon(
+            icon: Icon(
               Icons.home,
               color: Colors.green.shade900,
               size: 36,
@@ -81,7 +81,7 @@ final baseWidget = Center(
             ]),
           ),
           DecoratedIcon(
-            child: Icon(
+            icon: Icon(
               Icons.home,
               color: Colors.green.shade900,
               size: 36,
@@ -96,7 +96,7 @@ final baseWidget = Center(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           DecoratedIcon(
-            child: const Icon(
+            icon: const Icon(
               Icons.access_alarm,
               color: Colors.black54,
               size: 36,
@@ -106,7 +106,7 @@ final baseWidget = Center(
             ]),
           ),
           DecoratedIcon(
-            child: const Icon(
+            icon: const Icon(
               Icons.access_alarm,
               color: Colors.black54,
               size: 36,
@@ -116,7 +116,7 @@ final baseWidget = Center(
             ]),
           ),
           DecoratedIcon(
-            child: const Icon(
+            icon: const Icon(
               Icons.access_alarm,
               color: Colors.black54,
               size: 36,

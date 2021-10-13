@@ -22,7 +22,7 @@ void main() {
         generateBaseApp(
           child: const Center(
             child: DecoratedIcon(
-              child: Icon(Icons.home, color: Colors.red),
+              icon: Icon(Icons.home, color: Colors.red),
               decoration: IconDecoration(shadows: [Shadow(blurRadius: 3)]),
             ),
           ),
@@ -37,7 +37,7 @@ void main() {
         generateBaseApp(
           child: const Center(
             child: DecoratedIcon(
-              child: Icon(Icons.home, color: Colors.red),
+              icon: Icon(Icons.home, color: Colors.red),
               decoration: IconDecoration(
                 shadows: [Shadow(blurRadius: 3, offset: Offset(0, 6))],
               ),
@@ -54,7 +54,7 @@ void main() {
         generateBaseApp(
           child: const Center(
             child: DecoratedIcon(
-              child: Icon(Icons.home, color: Colors.red),
+              icon: Icon(Icons.home, color: Colors.red),
               decoration: IconDecoration(
                 shadows: [Shadow(blurRadius: 3, offset: Offset(3, 0))],
               ),

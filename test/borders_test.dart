@@ -13,7 +13,7 @@ void main() {
         generateBaseApp(
           child: const Center(
             child: DecoratedIcon(
-              child: Icon(Icons.favorite, color: Colors.transparent),
+              icon: Icon(Icons.favorite, color: Colors.transparent),
               decoration: IconDecoration(border: IconBorder()),
             ),
           ),

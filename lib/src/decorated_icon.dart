@@ -4,24 +4,24 @@ import 'package:icon_decoration/src/icon_decoration.dart';
 /// Reimplementation of the [Icon] widget which adds support for shadows and
 /// borders trough its [decoration] property.
 class DecoratedIcon extends StatelessWidget {
-  final Icon child;
+  final Icon icon;
   final IconDecoration? decoration;
 
   const DecoratedIcon({
     Key? key,
-    required this.child,
+    required this.icon,
     this.decoration,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final icon = child.icon!;
-    final textDirection = child.textDirection ?? Directionality.of(context);
+    final iconData = icon.icon!;
+    final textDirection = icon.textDirection ?? Directionality.of(context);
     final iconTheme = IconTheme.of(context);
-    final iconSize = child.size ?? iconTheme.size ?? 24.0;
+    final iconSize = icon.size ?? iconTheme.size ?? 24.0;
     final iconOpacity = iconTheme.opacity ?? 1.0;
     final border = decoration?.border;
-    Color iconColor = child.color ?? iconTheme.color!;
+    Color iconColor = icon.color ?? iconTheme.color!;
     if (iconOpacity != 1.0) {
       iconColor = iconColor.withOpacity(iconColor.opacity * iconOpacity);
     }
@@ -30,8 +30,8 @@ class DecoratedIcon extends StatelessWidget {
       inherit: false,
       color: iconColor,
       fontSize: iconSize,
-      fontFamily: icon.fontFamily,
-      package: icon.fontPackage,
+      fontFamily: iconData.fontFamily,
+      package: iconData.fontPackage,
       shadows: decoration?.shadows,
     );
 
@@ -39,12 +39,12 @@ class DecoratedIcon extends StatelessWidget {
       overflow: TextOverflow.visible,
       textDirection: textDirection,
       text: TextSpan(
-        text: String.fromCharCode(icon.codePoint),
+        text: String.fromCharCode(iconData.codePoint),
         style: iconStyle,
       ),
     );
 
-    if (icon.matchTextDirection) {
+    if (iconData.matchTextDirection) {
       switch (textDirection) {
         case TextDirection.rtl:
           iconWidget = Transform(
@@ -65,7 +65,7 @@ class DecoratedIcon extends StatelessWidget {
         overflow: TextOverflow.visible,
         textDirection: textDirection,
         text: TextSpan(
-          text: String.fromCharCode(icon.codePoint),
+          text: String.fromCharCode(iconData.codePoint),
           style: iconStyle.copyWith(shadows: null),
         ),
       );
@@ -78,7 +78,7 @@ class DecoratedIcon extends StatelessWidget {
             textDirection: textDirection,
             textAlign: TextAlign.center,
             text: TextSpan(
-              text: String.fromCharCode(icon.codePoint),
+              text: String.fromCharCode(iconData.codePoint),
               style: iconStyle.copyWith(
                 foreground: Paint()
                   ..style = PaintingStyle.stroke
@@ -96,7 +96,7 @@ class DecoratedIcon extends StatelessWidget {
     }
 
     return Semantics(
-      label: child.semanticLabel,
+      label: icon.semanticLabel,
       child: ExcludeSemantics(
         child: SizedBox(
           width: iconSize,

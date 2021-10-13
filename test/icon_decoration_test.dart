@@ -37,7 +37,6 @@ void main() {
       (tester) async {
         tester.binding.window.physicalSizeTestValue = const Size.square(100);
         await tester.pumpWidget(generateBaseApp(
-          backgroundColor: Colors.black,
           child: const Center(
             child: DecoratedIcon(
               child: Icon(Icons.all_inclusive_outlined),

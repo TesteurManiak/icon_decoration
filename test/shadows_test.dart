@@ -9,7 +9,10 @@ void main() {
   group('Golden Shadows', () {
     customGoldenTest('Shadow base widget', (tester) async {
       tester.binding.window.physicalSizeTestValue = const Size.square(352);
-      await tester.pumpWidget(generateBaseApp(child: baseWidget));
+      await tester.pumpWidget(generateBaseApp(
+        child: baseWidget,
+        backgroundColor: Colors.black,
+      ));
       addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
     });
 
@@ -23,7 +26,6 @@ void main() {
               decoration: IconDecoration(shadows: [Shadow(blurRadius: 3)]),
             ),
           ),
-          backgroundColor: Colors.white,
         ),
       );
       addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
@@ -41,7 +43,6 @@ void main() {
               ),
             ),
           ),
-          backgroundColor: Colors.white,
         ),
       );
       addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
@@ -59,7 +60,6 @@ void main() {
               ),
             ),
           ),
-          backgroundColor: Colors.white,
         ),
       );
       addTearDown(tester.binding.window.clearPhysicalSizeTestValue);

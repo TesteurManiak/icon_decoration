@@ -3,7 +3,7 @@ import 'package:icon_decoration/icon_decoration.dart';
 
 Widget generateBaseApp({
   required Widget child,
-  Color backgroundColor = Colors.black,
+  Color backgroundColor = Colors.white,
 }) =>
     MaterialApp(
       debugShowCheckedModeBanner: false,

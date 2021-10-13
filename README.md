@@ -1,6 +1,6 @@
 # icon_decoration
 
-Add decoration capabilities for the Icon widget with shadows, borders, gradients.
+Add decoration capabilities for the Icon widget with shadows, borders, gradients. This new `DecoratedIcon` widget overlap itself with the base `Icon` widget to provide a more complete decoration system through a `IconDecoration` property.
 
 ## Features
 

@@ -23,7 +23,7 @@ void main() {
                 Icons.home,
                 color: Colors.red,
               ),
-              shadows: [Shadow(blurRadius: 3)],
+              decoration: IconDecoration(shadows: [Shadow(blurRadius: 3)]),
             ),
           ),
           backgroundColor: Colors.white,
@@ -40,7 +40,9 @@ void main() {
           child: const Center(
             child: DecoratedIcon(
               child: Icon(Icons.all_inclusive_outlined),
-              shadows: [Shadow(color: Colors.cyan, blurRadius: 3)],
+              decoration: IconDecoration(
+                shadows: [Shadow(color: Colors.cyan, blurRadius: 3)],
+              ),
             ),
           ),
         ));
@@ -55,7 +57,9 @@ void main() {
           child: const Center(
             child: DecoratedIcon(
               child: Icon(Icons.home, color: Colors.red),
-              shadows: [Shadow(blurRadius: 3, offset: Offset(0, 6))],
+              decoration: IconDecoration(
+                shadows: [Shadow(blurRadius: 3, offset: Offset(0, 6))],
+              ),
             ),
           ),
           backgroundColor: Colors.white,
@@ -71,7 +75,9 @@ void main() {
           child: const Center(
             child: DecoratedIcon(
               child: Icon(Icons.home, color: Colors.red),
-              shadows: [Shadow(blurRadius: 3, offset: Offset(3, 0))],
+              decoration: IconDecoration(
+                shadows: [Shadow(blurRadius: 3, offset: Offset(3, 0))],
+              ),
             ),
           ),
           backgroundColor: Colors.white,

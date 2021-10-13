@@ -27,9 +27,11 @@ class MyApp extends StatelessWidget {
                       color: Colors.lightBlueAccent,
                       size: 36,
                     ),
-                    shadows: [
-                      Shadow(blurRadius: 3, color: Colors.lightBlueAccent),
-                    ],
+                    decoration: IconDecoration(
+                      shadows: [
+                        Shadow(blurRadius: 3, color: Colors.lightBlueAccent),
+                      ],
+                    ),
                   ),
                   DecoratedIcon(
                     child: const Icon(
@@ -37,12 +39,12 @@ class MyApp extends StatelessWidget {
                       color: Colors.lightBlueAccent,
                       size: 36,
                     ),
-                    shadows: [
+                    decoration: IconDecoration(shadows: [
                       Shadow(
                         blurRadius: 3,
                         color: Colors.lightBlueAccent.shade100,
                       ),
-                    ],
+                    ]),
                   ),
                   const DecoratedIcon(
                     child: Icon(
@@ -50,9 +52,9 @@ class MyApp extends StatelessWidget {
                       color: Colors.lightBlueAccent,
                       size: 36,
                     ),
-                    shadows: [
+                    decoration: IconDecoration(shadows: [
                       Shadow(blurRadius: 2, color: Colors.lightBlueAccent),
-                    ],
+                    ]),
                   )
                 ],
               ),
@@ -65,9 +67,9 @@ class MyApp extends StatelessWidget {
                       color: Colors.green.shade900,
                       size: 36,
                     ),
-                    shadows: const [
+                    decoration: const IconDecoration(shadows: [
                       Shadow(color: Colors.yellowAccent, blurRadius: 3),
-                    ],
+                    ]),
                   ),
                   DecoratedIcon(
                     child: Icon(
@@ -75,9 +77,9 @@ class MyApp extends StatelessWidget {
                       color: Colors.green.shade900,
                       size: 36,
                     ),
-                    shadows: [
+                    decoration: IconDecoration(shadows: [
                       Shadow(color: Colors.green.shade900, blurRadius: 3),
-                    ],
+                    ]),
                   ),
                   DecoratedIcon(
                     child: Icon(
@@ -85,9 +87,9 @@ class MyApp extends StatelessWidget {
                       color: Colors.green.shade900,
                       size: 36,
                     ),
-                    shadows: [
+                    decoration: IconDecoration(shadows: [
                       Shadow(color: Colors.green.shade900, blurRadius: 2),
-                    ],
+                    ]),
                   )
                 ],
               ),
@@ -100,10 +102,10 @@ class MyApp extends StatelessWidget {
                       color: Colors.black54,
                       size: 36,
                     ),
-                    shadows: [
+                    decoration: IconDecoration(shadows: [
                       Shadow(
                           color: Colors.yellowAccent.shade400, blurRadius: 3),
-                    ],
+                    ]),
                   ),
                   DecoratedIcon(
                     child: const Icon(
@@ -111,9 +113,9 @@ class MyApp extends StatelessWidget {
                       color: Colors.black54,
                       size: 36,
                     ),
-                    shadows: [
+                    decoration: IconDecoration(shadows: [
                       Shadow(color: Colors.red.shade400, blurRadius: 3),
-                    ],
+                    ]),
                   ),
                   DecoratedIcon(
                     child: const Icon(
@@ -121,9 +123,9 @@ class MyApp extends StatelessWidget {
                       color: Colors.black54,
                       size: 36,
                     ),
-                    shadows: [
+                    decoration: IconDecoration(shadows: [
                       Shadow(color: Colors.cyanAccent.shade400, blurRadius: 3),
-                    ],
+                    ]),
                   )
                 ],
               ),

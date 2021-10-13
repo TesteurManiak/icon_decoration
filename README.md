@@ -20,4 +20,3 @@ Add decoration capabilities for the Icon widget with shadows, borders, gradients
 ## TODO
 
 * Add support for gradients
-* Add support for borders

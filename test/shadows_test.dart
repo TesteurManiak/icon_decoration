@@ -6,7 +6,7 @@ import 'test_utils/base_widget.dart';
 import 'test_utils/custom_golden.dart';
 
 void main() {
-  group('Golden tests', () {
+  group('Golden Shadows', () {
     customGoldenTest('base test', (tester) async {
       tester.binding.window.physicalSizeTestValue = const Size.square(352);
       await tester.pumpWidget(generateBaseApp(child: baseWidget));
@@ -19,10 +19,7 @@ void main() {
         generateBaseApp(
           child: const Center(
             child: DecoratedIcon(
-              child: Icon(
-                Icons.home,
-                color: Colors.red,
-              ),
+              child: Icon(Icons.home, color: Colors.red),
               decoration: IconDecoration(shadows: [Shadow(blurRadius: 3)]),
             ),
           ),
@@ -31,24 +28,6 @@ void main() {
       );
       addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
     });
-
-    customGoldenTest(
-      'Issue #3: all_inclusive_outlined',
-      (tester) async {
-        tester.binding.window.physicalSizeTestValue = const Size.square(100);
-        await tester.pumpWidget(generateBaseApp(
-          child: const Center(
-            child: DecoratedIcon(
-              child: Icon(Icons.all_inclusive_outlined),
-              decoration: IconDecoration(
-                shadows: [Shadow(color: Colors.cyan, blurRadius: 3)],
-              ),
-            ),
-          ),
-        ));
-        addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
-      },
-    );
 
     customGoldenTest('Offset: 0, 6', (tester) async {
       tester.binding.window.physicalSizeTestValue = const Size.square(150);

@@ -10,6 +10,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    BoxDecoration(
+      border: Border.all(
+        color: Colors.black,
+        width: 1,
+        style: BorderStyle.solid,
+      ),
+    );
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.blue),
       home: Scaffold(
@@ -97,38 +104,52 @@ class MyApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   DecoratedIcon(
-                    child: const Icon(
-                      Icons.access_alarm,
-                      color: Colors.black54,
-                      size: 36,
-                    ),
+                    child: const Icon(Icons.access_alarm, size: 36),
                     decoration: IconDecoration(shadows: [
                       Shadow(
                           color: Colors.yellowAccent.shade400, blurRadius: 3),
                     ]),
                   ),
                   DecoratedIcon(
-                    child: const Icon(
-                      Icons.access_alarm,
-                      color: Colors.black54,
-                      size: 36,
-                    ),
+                    child: const Icon(Icons.access_alarm, size: 36),
                     decoration: IconDecoration(shadows: [
                       Shadow(color: Colors.red.shade400, blurRadius: 3),
                     ]),
                   ),
                   DecoratedIcon(
-                    child: const Icon(
-                      Icons.access_alarm,
-                      color: Colors.black54,
-                      size: 36,
-                    ),
+                    child: const Icon(Icons.access_alarm, size: 36),
                     decoration: IconDecoration(shadows: [
                       Shadow(color: Colors.cyanAccent.shade400, blurRadius: 3),
                     ]),
                   )
                 ],
               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  DecoratedIcon(
+                    child: Icon(Icons.favorite, size: 36),
+                    decoration: IconDecoration(
+                      border: IconBorder(color: Colors.yellow, width: 4),
+                    ),
+                  ),
+                  DecoratedIcon(
+                    child: Icon(Icons.favorite, size: 36),
+                    decoration: IconDecoration(
+                      border: IconBorder(color: Colors.red, width: 4),
+                      shadows: [
+                        Shadow(color: Colors.red, blurRadius: 6),
+                      ],
+                    ),
+                  ),
+                  DecoratedIcon(
+                    child: Icon(Icons.favorite, size: 36, color: Colors.red),
+                    decoration: IconDecoration(
+                      border: IconBorder(color: Colors.cyan, width: 4),
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ),

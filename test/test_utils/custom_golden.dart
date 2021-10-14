@@ -21,5 +21,6 @@ void customGoldenTest(
           .replaceAll(' ', '_')
           .replaceAll(RegExp(r'(?:|[^\w\s])+'), ''),
     );
+    addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
   });
 }

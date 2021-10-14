@@ -13,13 +13,18 @@ class IconDecoration {
   /// Multiple shadows are supported to replicate lighting from multiple light
   /// sources.
   final List<Shadow>? shadows;
+
+  /// A border to draw above the icon color or [gradient].
   final IconBorder? border;
-  // final Gradient? gradient;
+
+  /// Apply a gradient to the icon. If this is specified the [Icon.color]
+  /// property has no effect.
+  final Gradient? gradient;
 
   /// Creates a `DecoratedIcon` decoration.
   const IconDecoration({
     this.shadows,
     this.border,
-    // this.gradient,
+    this.gradient,
   });
 }

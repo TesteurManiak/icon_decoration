@@ -21,12 +21,13 @@ class DecoratedIcon extends StatelessWidget {
     final iconSize = icon.size ?? iconTheme.size ?? 24.0;
     final iconOpacity = iconTheme.opacity ?? 1.0;
     final border = decoration?.border;
+    final gradient = decoration?.gradient;
     Color iconColor = icon.color ?? iconTheme.color!;
     if (iconOpacity != 1.0) {
       iconColor = iconColor.withOpacity(iconColor.opacity * iconOpacity);
     }
 
-    final iconStyle = TextStyle(
+    TextStyle iconStyle = TextStyle(
       inherit: false,
       color: iconColor,
       fontSize: iconSize,
@@ -34,6 +35,15 @@ class DecoratedIcon extends StatelessWidget {
       package: iconData.fontPackage,
       shadows: decoration?.shadows,
     );
+
+    if (gradient != null) {
+      iconStyle = iconStyle.copyWith(
+        foreground: Paint()
+          ..shader = gradient.createShader(
+            Rect.fromLTWH(0, 0, iconSize, iconSize),
+          ),
+      );
+    }
 
     Widget iconWidget = RichText(
       overflow: TextOverflow.visible,

@@ -13,7 +13,6 @@ void main() {
         child: baseWidget,
         backgroundColor: Colors.black,
       ));
-      addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
     });
 
     customGoldenTest('Default shadow', (tester) async {
@@ -28,7 +27,6 @@ void main() {
           ),
         ),
       );
-      addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
     });
 
     customGoldenTest('Shadow with Offset(0, 6)', (tester) async {
@@ -45,7 +43,6 @@ void main() {
           ),
         ),
       );
-      addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
     });
 
     customGoldenTest('Shadow with Offset(3, 0)', (tester) async {
@@ -62,7 +59,6 @@ void main() {
           ),
         ),
       );
-      addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
     });
   });
 }

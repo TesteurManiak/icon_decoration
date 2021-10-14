@@ -82,5 +82,29 @@ void main() {
         ),
       );
     });
+
+    customGoldenTest('Gradient with border and shadow', (tester) async {
+      tester.binding.window.physicalSizeTestValue = const Size.square(100);
+      await tester.pumpWidget(
+        generateBaseApp(
+          child: const Center(
+            child: DecoratedIcon(
+              icon: Icon(Icons.all_inbox),
+              decoration: IconDecoration(
+                gradient: _rainbowGradient,
+                border: IconBorder(),
+                shadows: [
+                  Shadow(
+                    color: Colors.red,
+                    blurRadius: 3,
+                    offset: Offset(0, 2),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
+      );
+    });
   });
 }

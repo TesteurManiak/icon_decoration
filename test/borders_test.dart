@@ -19,7 +19,6 @@ void main() {
           ),
         ),
       );
-      addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
     });
 
     customGoldenTest('Border with colorized icon', (tester) async {
@@ -34,7 +33,6 @@ void main() {
           ),
         ),
       );
-      addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
     });
 
     customGoldenTest('Border with shadows', (tester) async {
@@ -58,7 +56,6 @@ void main() {
           ),
         ),
       );
-      addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
     });
   });
 }

@@ -42,3 +42,4 @@ DecoratedIcon(
 ## TODO
 
 * Add support for gradients
+* Document API

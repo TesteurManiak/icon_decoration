@@ -14,12 +14,12 @@ class IconDecoration {
   /// sources.
   final List<Shadow>? shadows;
   final IconBorder? border;
-  // final Gradient? gradient;
+  final Gradient? gradient;
 
   /// Creates a `DecoratedIcon` decoration.
   const IconDecoration({
     this.shadows,
     this.border,
-    // this.gradient,
+    this.gradient,
   });
 }

@@ -66,7 +66,7 @@ class DecoratedIcon extends StatelessWidget {
         textDirection: textDirection,
         text: TextSpan(
           text: String.fromCharCode(iconData.codePoint),
-          style: iconStyle.copyWith(shadows: null),
+          style: iconStyle.copyWith(shadows: []),
         ),
       );
       iconWidget = Stack(

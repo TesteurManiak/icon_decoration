@@ -9,6 +9,7 @@ Add decoration capabilities for the `Icon` widget with shadows, borders, gradien
 
 * Add shadows to icons
 * Add borders to icons
+* Add gradients to icons
 
 ![](https://raw.githubusercontent.com/TesteurManiak/icon_decoration/main/test/goldens/shadow_base_widget.png)
 
@@ -38,8 +39,3 @@ DecoratedIcon(
     ),
 )
 ```
-
-## TODO
-
-* Add support for gradients
-* Document API

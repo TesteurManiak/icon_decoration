@@ -1,7 +1,7 @@
 name: icon_decoration
 description: Add decoration capabilities for the Icon widget with shadows,
   borders, gradients.
-version: 1.0.0
+version: 1.0.0+1
 homepage: https://github.com/TesteurManiak/icon_decoration
 repository: https://github.com/TesteurManiak/icon_decoration
 

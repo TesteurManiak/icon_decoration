@@ -1,6 +1,6 @@
 # icon_decoration
 
-![Pub Version](https://img.shields.io/pub/v/icon_decoration)
+[![Pub Version](https://img.shields.io/pub/v/icon_decoration)](https://pub.dev/packages/icon_decoration)
 [![GitHub issues](https://img.shields.io/github/issues/TesteurManiak/icon_decoration)](https://github.com/TesteurManiak/icon_decoration/issues)
 [![GitHub license](https://img.shields.io/github/license/TesteurManiak/icon_decoration)](https://github.com/TesteurManiak/icon_decoration/blob/main/LICENSE)
 

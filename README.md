@@ -24,7 +24,7 @@ import 'package:icon_decoration/icon_decoration.dart';
 
 ### Add shadows to icons
 
-![](https://raw.githubusercontent.com/TesteurManiak/icon_decoration/main/screenshots/shadow_with_offset3_0.png)
+![](https://github.com/TesteurManiak/icon_decoration/blob/main/screenshots/shadow_with_offset3_0.png)
 
 ```dart
 DecoratedIcon(
@@ -37,7 +37,7 @@ DecoratedIcon(
 
 ### Add borders to icons
 
-![](https://raw.githubusercontent.com/TesteurManiak/icon_decoration/main/screenshots/border_with_colorized_icon.png)
+![](https://github.com/TesteurManiak/icon_decoration/blob/main/screenshots/border_with_colorized_icon.png)
 
 ```dart
 DecoratedIcon(
@@ -48,7 +48,7 @@ DecoratedIcon(
 
 ### Add gradients to icons
 
-![](https://raw.githubusercontent.com/TesteurManiak/icon_decoration/main/screenshots/base_gradient.png)
+![](https://github.com/TesteurManiak/icon_decoration/blob/main/screenshots/base_gradient.png)
 
 ```dart
 DecoratedIcon(
@@ -61,7 +61,7 @@ DecoratedIcon(
 
 ### Mix them all together
 
-![](https://raw.githubusercontent.com/TesteurManiak/icon_decoration/main/screenshots/gradient_with_border_and_shadow.png)
+![](https://github.com/TesteurManiak/icon_decoration/blob/main/screenshots/gradient_with_border_and_shadow.png)
 
 ```dart
 DecoratedIcon(

@@ -1,3 +1,7 @@
+## 1.0.0+3
+
+* Fixed README.md
+
 ## 1.0.0+2
 
 * Updated golden tests with the package [alchemist](https://pub.dev/packages/alchemist)

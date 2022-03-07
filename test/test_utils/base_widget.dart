@@ -1,21 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:icon_decoration/icon_decoration.dart';
 
-Widget generateBaseApp({
-  required Widget child,
-  Color backgroundColor = Colors.white,
-}) =>
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: backgroundColor,
-        body: child,
-      ),
-    );
-
-final baseWidget = Center(
+final baseWidget = DecoratedBox(
+  decoration: const BoxDecoration(color: Colors.black),
   child: Column(
-    mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -38,12 +26,14 @@ final baseWidget = Center(
               color: Colors.lightBlueAccent,
               size: 36,
             ),
-            decoration: IconDecoration(shadows: [
-              Shadow(
-                blurRadius: 3,
-                color: Colors.lightBlueAccent.shade100,
-              ),
-            ]),
+            decoration: IconDecoration(
+              shadows: [
+                Shadow(
+                  blurRadius: 3,
+                  color: Colors.lightBlueAccent.shade100,
+                ),
+              ],
+            ),
           ),
           const DecoratedIcon(
             icon: Icon(
@@ -51,9 +41,11 @@ final baseWidget = Center(
               color: Colors.lightBlueAccent,
               size: 36,
             ),
-            decoration: IconDecoration(shadows: [
-              Shadow(blurRadius: 2, color: Colors.lightBlueAccent),
-            ]),
+            decoration: IconDecoration(
+              shadows: [
+                Shadow(blurRadius: 2, color: Colors.lightBlueAccent),
+              ],
+            ),
           )
         ],
       ),
@@ -66,9 +58,11 @@ final baseWidget = Center(
               color: Colors.green.shade900,
               size: 36,
             ),
-            decoration: const IconDecoration(shadows: [
-              Shadow(color: Colors.yellowAccent, blurRadius: 3),
-            ]),
+            decoration: const IconDecoration(
+              shadows: [
+                Shadow(color: Colors.yellowAccent, blurRadius: 3),
+              ],
+            ),
           ),
           DecoratedIcon(
             icon: Icon(
@@ -76,9 +70,11 @@ final baseWidget = Center(
               color: Colors.green.shade900,
               size: 36,
             ),
-            decoration: IconDecoration(shadows: [
-              Shadow(color: Colors.green.shade900, blurRadius: 3),
-            ]),
+            decoration: IconDecoration(
+              shadows: [
+                Shadow(color: Colors.green.shade900, blurRadius: 3),
+              ],
+            ),
           ),
           DecoratedIcon(
             icon: Icon(
@@ -86,9 +82,11 @@ final baseWidget = Center(
               color: Colors.green.shade900,
               size: 36,
             ),
-            decoration: IconDecoration(shadows: [
-              Shadow(color: Colors.green.shade900, blurRadius: 2),
-            ]),
+            decoration: IconDecoration(
+              shadows: [
+                Shadow(color: Colors.green.shade900, blurRadius: 2),
+              ],
+            ),
           )
         ],
       ),
@@ -101,9 +99,11 @@ final baseWidget = Center(
               color: Colors.black54,
               size: 36,
             ),
-            decoration: IconDecoration(shadows: [
-              Shadow(color: Colors.yellowAccent.shade400, blurRadius: 3),
-            ]),
+            decoration: IconDecoration(
+              shadows: [
+                Shadow(color: Colors.yellowAccent.shade400, blurRadius: 3),
+              ],
+            ),
           ),
           DecoratedIcon(
             icon: const Icon(
@@ -111,9 +111,11 @@ final baseWidget = Center(
               color: Colors.black54,
               size: 36,
             ),
-            decoration: IconDecoration(shadows: [
-              Shadow(color: Colors.red.shade400, blurRadius: 3),
-            ]),
+            decoration: IconDecoration(
+              shadows: [
+                Shadow(color: Colors.red.shade400, blurRadius: 3),
+              ],
+            ),
           ),
           DecoratedIcon(
             icon: const Icon(
@@ -121,9 +123,11 @@ final baseWidget = Center(
               color: Colors.black54,
               size: 36,
             ),
-            decoration: IconDecoration(shadows: [
-              Shadow(color: Colors.cyanAccent.shade400, blurRadius: 3),
-            ]),
+            decoration: IconDecoration(
+              shadows: [
+                Shadow(color: Colors.cyanAccent.shade400, blurRadius: 3),
+              ],
+            ),
           )
         ],
       ),

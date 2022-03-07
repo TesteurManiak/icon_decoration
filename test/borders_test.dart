@@ -1,47 +1,33 @@
+import 'package:alchemist/alchemist.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:icon_decoration/icon_decoration.dart';
 
-import 'test_utils/base_widget.dart';
-import 'test_utils/custom_golden.dart';
-
 void main() {
   group('Goldens Borders', () {
-    customGoldenTest('Default border', (tester) async {
-      tester.binding.window.physicalSizeTestValue = const Size.square(100);
-      await tester.pumpWidget(
-        generateBaseApp(
-          child: const Center(
-            child: DecoratedIcon(
-              icon: Icon(Icons.favorite, color: Colors.transparent),
+    goldenTest(
+      'Border rendering',
+      fileName: 'border_rendering',
+      widget: GoldenTestGroup(
+        children: [
+          GoldenTestScenario(
+            name: 'default',
+            child: const DecoratedIcon(
+              icon: Icon(Icons.favorite, color: Colors.transparent, size: 50),
               decoration: IconDecoration(border: IconBorder()),
             ),
           ),
-        ),
-      );
-    });
-
-    customGoldenTest('Border with colorized icon', (tester) async {
-      tester.binding.window.physicalSizeTestValue = const Size.square(100);
-      await tester.pumpWidget(
-        generateBaseApp(
-          child: const Center(
-            child: DecoratedIcon(
-              icon: Icon(Icons.favorite, color: Colors.green),
+          GoldenTestScenario(
+            name: 'with colorized icon',
+            child: const DecoratedIcon(
+              icon: Icon(Icons.favorite, color: Colors.green, size: 50),
               decoration: IconDecoration(border: IconBorder()),
             ),
           ),
-        ),
-      );
-    });
-
-    customGoldenTest('Border with shadows', (tester) async {
-      tester.binding.window.physicalSizeTestValue = const Size.square(100);
-      await tester.pumpWidget(
-        generateBaseApp(
-          child: const Center(
-            child: DecoratedIcon(
-              icon: Icon(Icons.favorite, color: Colors.green),
+          GoldenTestScenario(
+            name: 'with shadows',
+            child: const DecoratedIcon(
+              icon: Icon(Icons.favorite, color: Colors.green, size: 50),
               decoration: IconDecoration(
                 border: IconBorder(),
                 shadows: [
@@ -54,8 +40,8 @@ void main() {
               ),
             ),
           ),
-        ),
-      );
-    });
+        ],
+      ),
+    );
   });
 }

@@ -27,4 +27,15 @@ class IconDecoration {
     this.border,
     this.gradient,
   });
+
+  @override
+  bool operator ==(other) {
+    return other is IconDecoration &&
+        other.shadows == shadows &&
+        other.border == border &&
+        other.gradient == gradient;
+  }
+
+  @override
+  int get hashCode => hashValues(shadows, border, gradient);
 }

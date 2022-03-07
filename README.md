@@ -2,6 +2,7 @@
 
 [![Pub Version](https://img.shields.io/pub/v/icon_decoration)](https://pub.dev/packages/icon_decoration)
 [![Test workflow](https://github.com/TesteurManiak/icon_decoration/actions/workflows/tests.yml/badge.svg)](https://github.com/TesteurManiak/icon_decoration/actions/workflows/tests.yml)
+[![Coverage Status](https://coveralls.io/repos/github/TesteurManiak/icon_decoration/badge.svg?branch=main)](https://coveralls.io/github/TesteurManiak/icon_decoration?branch=main)
 
 Add decoration capabilities for the `Icon` widget with shadows, borders, gradients. This new `DecoratedIcon` widget overlap itself with the base `Icon` widget to provide a more complete decoration system through a `IconDecoration` property.
 

@@ -17,8 +17,6 @@ jobs:
     - run: flutter pub get
     - name: Test
       run: flutter test --coverage --dart-define=CI=true
-    - name: Exclude generated files from coverage
-      run: dart pub run remove_from_coverage -f coverage/lcov.info -r '\.g\.dart$'
     - name: Collect and report coverage
       uses: coverallsapp/github-action@v1.1.2
       with:

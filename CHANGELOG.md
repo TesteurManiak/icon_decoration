@@ -1,3 +1,7 @@
+## 1.0.1
+
+* Fix gradient issue [#3](https://github.com/TesteurManiak/icon_decoration/issues/3)
+
 ## 1.0.0+3
 
 * Fixed README.md

@@ -21,3 +21,19 @@ const rainbowGradient = LinearGradient(
     Colors.deepOrange,
   ],
 );
+
+final flutterGradient = LinearGradient(
+  colors: [
+    Colors.blue.shade400,
+    Colors.blue.shade900,
+  ],
+);
+
+final fadeOut = LinearGradient(
+  colors: [
+    Colors.white,
+    Colors.white.withAlpha(0),
+  ],
+  begin: Alignment.topLeft,
+  end: Alignment.bottomRight,
+);

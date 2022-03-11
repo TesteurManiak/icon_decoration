@@ -8,74 +8,81 @@ import 'test_utils/gradients.dart';
 void main() {
   group('Goldens Gradients', () {
     goldenTest(
-      'Gradient default',
-      fileName: 'gradient_default',
-      widget: GoldenTestScenario(
-        name: 'default',
-        child: const DecoratedIcon(
-          icon: Icon(Icons.all_inbox, size: 50),
-          decoration: IconDecoration(
-            gradient: rainbowGradient,
+      'Gradient rendering',
+      fileName: 'gradient_rendering',
+      widget: GoldenTestGroup(
+        children: [
+          GoldenTestScenario(
+            name: 'rainbow gradient',
+            child: const DecoratedIcon(
+              icon: Icon(Icons.all_inbox, size: 50),
+              decoration: IconDecoration(
+                gradient: rainbowGradient,
+              ),
+            ),
           ),
-        ),
-      ),
-    );
-
-    goldenTest(
-      'Gradient shadows',
-      fileName: 'gradient_shadows',
-      widget: GoldenTestScenario(
-        name: 'with shadows',
-        child: const DecoratedIcon(
-          icon: Icon(Icons.all_inbox, size: 50),
-          decoration: IconDecoration(
-            gradient: rainbowGradient,
-            shadows: [
-              Shadow(
-                color: Colors.red,
-                blurRadius: 3,
-                offset: Offset(0, 2),
-              )
-            ],
+          GoldenTestScenario(
+            name: 'flutter gradient',
+            child: DecoratedIcon(
+              icon: const Icon(Icons.all_inbox, size: 50),
+              decoration: IconDecoration(
+                gradient: flutterGradient,
+              ),
+            ),
           ),
-        ),
-      ),
-    );
-
-    goldenTest(
-      'Gradient with border',
-      fileName: 'gradient_border',
-      widget: GoldenTestScenario(
-        name: 'with border',
-        child: const DecoratedIcon(
-          icon: Icon(Icons.all_inbox, size: 50),
-          decoration: IconDecoration(
-            gradient: rainbowGradient,
-            border: IconBorder(),
+          GoldenTestScenario(
+            name: 'fadeOut gradient',
+            child: DecoratedIcon(
+              icon: const Icon(Icons.all_inbox, size: 50),
+              decoration: IconDecoration(
+                gradient: fadeOut,
+              ),
+            ),
           ),
-        ),
-      ),
-    );
-
-    goldenTest(
-      'Gradient with border and shadows',
-      fileName: 'gradient_border_shadows',
-      widget: GoldenTestScenario(
-        name: 'with border and shadows',
-        child: const DecoratedIcon(
-          icon: Icon(Icons.all_inbox, size: 50),
-          decoration: IconDecoration(
-            gradient: rainbowGradient,
-            border: IconBorder(),
-            shadows: [
-              Shadow(
-                color: Colors.red,
-                blurRadius: 3,
-                offset: Offset(0, 2),
-              )
-            ],
+          GoldenTestScenario(
+            name: 'with red shadows',
+            child: const DecoratedIcon(
+              icon: Icon(Icons.all_inbox, size: 50),
+              decoration: IconDecoration(
+                gradient: rainbowGradient,
+                shadows: [
+                  Shadow(
+                    color: Colors.red,
+                    blurRadius: 3,
+                    offset: Offset(0, 2),
+                  )
+                ],
+              ),
+            ),
           ),
-        ),
+          GoldenTestScenario(
+            name: 'with default border',
+            child: const DecoratedIcon(
+              icon: Icon(Icons.all_inbox, size: 50),
+              decoration: IconDecoration(
+                gradient: rainbowGradient,
+                border: IconBorder(),
+              ),
+            ),
+          ),
+          GoldenTestScenario(
+            name: 'with border and shadows',
+            child: const DecoratedIcon(
+              icon: Icon(Icons.all_inbox, size: 50),
+              decoration: IconDecoration(
+                gradient: rainbowGradient,
+                border: IconBorder(),
+                shadows: [
+                  Shadow(
+                    color: Colors.red,
+                    blurRadius: 3,
+                    offset: Offset(0, 2),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   });

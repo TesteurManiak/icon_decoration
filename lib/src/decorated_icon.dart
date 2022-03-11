@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:icon_decoration/src/gradient_icon.dart';
 import 'package:icon_decoration/src/icon_decoration.dart';
 
 /// Reimplementation of the [Icon] widget which adds support for shadows and
@@ -7,11 +8,8 @@ class DecoratedIcon extends StatelessWidget {
   final Icon icon;
   final IconDecoration? decoration;
 
-  const DecoratedIcon({
-    Key? key,
-    required this.icon,
-    this.decoration,
-  }) : super(key: key);
+  const DecoratedIcon({Key? key, required this.icon, this.decoration})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,15 +34,6 @@ class DecoratedIcon extends StatelessWidget {
       shadows: decoration?.shadows,
     );
 
-    if (gradient != null) {
-      iconStyle = iconStyle.copyWith(
-        foreground: Paint()
-          ..shader = gradient.createShader(
-            Rect.fromLTWH(0, 0, iconSize, iconSize),
-          ),
-      );
-    }
-
     Widget iconWidget = RichText(
       overflow: TextOverflow.visible,
       textDirection: textDirection,
@@ -53,6 +42,26 @@ class DecoratedIcon extends StatelessWidget {
         style: iconStyle,
       ),
     );
+
+    Widget? gradientWidgetCpy;
+    if (gradient != null) {
+      iconWidget = GradientIcon(
+        icon: iconData,
+        size: iconSize,
+        gradient: gradient,
+        textDirection: textDirection,
+        style: iconStyle,
+      );
+
+      // Creates a copy to ensure the original gradient is not modified.
+      gradientWidgetCpy = GradientIcon(
+        icon: iconData,
+        size: iconSize,
+        gradient: gradient,
+        textDirection: textDirection,
+        style: iconStyle,
+      );
+    }
 
     if (iconData.matchTextDirection) {
       switch (textDirection) {
@@ -71,14 +80,15 @@ class DecoratedIcon extends StatelessWidget {
 
     if (border != null) {
       // Remove shadows from the widget as it will be displayed by the border.
-      iconWidget = RichText(
-        overflow: TextOverflow.visible,
-        textDirection: textDirection,
-        text: TextSpan(
-          text: String.fromCharCode(iconData.codePoint),
-          style: iconStyle.copyWith(shadows: []),
-        ),
-      );
+      iconWidget = gradientWidgetCpy ??
+          RichText(
+            overflow: TextOverflow.visible,
+            textDirection: textDirection,
+            text: TextSpan(
+              text: String.fromCharCode(iconData.codePoint),
+              style: iconStyle.copyWith(shadows: []),
+            ),
+          );
       iconWidget = Stack(
         alignment: Alignment.center,
         textDirection: textDirection,

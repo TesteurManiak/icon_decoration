@@ -10,14 +10,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: subosito/flutter-action@v1.5.3
-      with:
-        flutter-version: '2.10.2'
+    - uses: actions/checkout@v3
+    - uses: subosito/flutter-action@v2.10.0
     - run: flutter pub get
     - name: Test
       run: flutter test --coverage --dart-define=CI=true
     - name: Collect and report coverage
-      uses: coverallsapp/github-action@v1.1.2
+      uses: coverallsapp/github-action@v2.1.2
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}

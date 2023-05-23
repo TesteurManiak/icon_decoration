@@ -10,80 +10,88 @@ void main() {
     goldenTest(
       'Gradient rendering',
       fileName: 'gradient_rendering',
-      widget: GoldenTestGroup(
-        children: [
-          GoldenTestScenario(
-            name: 'rainbow gradient',
-            child: const DecoratedIcon(
-              icon: Icon(Icons.all_inbox, size: 50),
-              decoration: IconDecoration(
-                gradient: rainbowGradient,
+      builder: () {
+        return GoldenTestGroup(
+          children: [
+            GoldenTestScenario(
+              name: 'rainbow gradient',
+              child: const DecoratedIcon(
+                icon: Icon(Icons.all_inbox, size: 50),
+                decoration: IconDecoration(
+                  gradient: RainbowGradient(),
+                ),
               ),
             ),
-          ),
-          GoldenTestScenario(
-            name: 'flutter gradient',
-            child: DecoratedIcon(
-              icon: const Icon(Icons.all_inbox, size: 50),
-              decoration: IconDecoration(
-                gradient: flutterGradient,
+            GoldenTestScenario(
+              name: 'flutter gradient',
+              child: const DecoratedIcon(
+                icon: Icon(Icons.all_inbox, size: 50),
+                decoration: IconDecoration(
+                  gradient: FlutterGradient(),
+                ),
               ),
             ),
-          ),
-          GoldenTestScenario(
-            name: 'fadeOut gradient',
-            child: DecoratedIcon(
-              icon: const Icon(Icons.all_inbox, size: 50),
-              decoration: IconDecoration(
-                gradient: fadeOut,
+            GoldenTestScenario(
+              name: 'fadeOut gradient',
+              child: const DecoratedIcon(
+                icon: Icon(Icons.all_inbox, size: 50),
+                decoration: IconDecoration(
+                  gradient: FadeOutGradient(),
+                ),
               ),
             ),
-          ),
-          GoldenTestScenario(
-            name: 'with red shadows',
-            child: const DecoratedIcon(
-              icon: Icon(Icons.all_inbox, size: 50),
-              decoration: IconDecoration(
-                gradient: rainbowGradient,
-                shadows: [
-                  Shadow(
-                    color: Colors.red,
-                    blurRadius: 3,
-                    offset: Offset(0, 2),
-                  )
-                ],
+            GoldenTestScenario(
+              name: 'with red shadows',
+              child: const DecoratedIcon(
+                icon: Icon(
+                  Icons.all_inbox,
+                  size: 50,
+                  shadows: [
+                    Shadow(
+                      color: Colors.red,
+                      blurRadius: 3,
+                      offset: Offset(0, 2),
+                    )
+                  ],
+                ),
+                decoration: IconDecoration(
+                  gradient: RainbowGradient(),
+                ),
               ),
             ),
-          ),
-          GoldenTestScenario(
-            name: 'with default border',
-            child: const DecoratedIcon(
-              icon: Icon(Icons.all_inbox, size: 50),
-              decoration: IconDecoration(
-                gradient: rainbowGradient,
-                border: IconBorder(),
+            GoldenTestScenario(
+              name: 'with default border',
+              child: const DecoratedIcon(
+                icon: Icon(Icons.all_inbox, size: 50),
+                decoration: IconDecoration(
+                  gradient: RainbowGradient(),
+                  border: IconBorder(),
+                ),
               ),
             ),
-          ),
-          GoldenTestScenario(
-            name: 'with border and shadows',
-            child: const DecoratedIcon(
-              icon: Icon(Icons.all_inbox, size: 50),
-              decoration: IconDecoration(
-                gradient: rainbowGradient,
-                border: IconBorder(),
-                shadows: [
-                  Shadow(
-                    color: Colors.red,
-                    blurRadius: 3,
-                    offset: Offset(0, 2),
-                  )
-                ],
+            GoldenTestScenario(
+              name: 'with border and shadows',
+              child: const DecoratedIcon(
+                icon: Icon(
+                  Icons.all_inbox,
+                  size: 50,
+                  shadows: [
+                    Shadow(
+                      color: Colors.red,
+                      blurRadius: 3,
+                      offset: Offset(0, 2),
+                    )
+                  ],
+                ),
+                decoration: IconDecoration(
+                  gradient: RainbowGradient(),
+                  border: IconBorder(),
+                ),
               ),
             ),
-          ),
-        ],
-      ),
+          ],
+        );
+      },
     );
   });
 }

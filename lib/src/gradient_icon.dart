@@ -2,12 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class GradientIcon extends StatelessWidget {
-  final IconData icon;
-  final double size;
-  final Gradient gradient;
-  final TextDirection textDirection;
-  final TextStyle style;
-
   const GradientIcon({
     Key? key,
     required this.icon,
@@ -16,6 +10,12 @@ class GradientIcon extends StatelessWidget {
     required this.textDirection,
     required this.style,
   }) : super(key: key);
+
+  final IconData icon;
+  final double size;
+  final Gradient gradient;
+  final TextDirection textDirection;
+  final TextStyle style;
 
   @override
   Widget build(BuildContext context) {
@@ -44,17 +44,16 @@ class GradientIcon extends StatelessWidget {
 }
 
 class _GradientIconPainter extends CustomPainter {
-  final Gradient gradient;
-  final IconData icon;
-  final TextStyle style;
-  final TextPainter textPainter;
-
   _GradientIconPainter({
     required this.gradient,
     required this.icon,
     required this.style,
     required this.textPainter,
   });
+  final Gradient gradient;
+  final IconData icon;
+  final TextStyle style;
+  final TextPainter textPainter;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -65,14 +64,15 @@ class _GradientIconPainter extends CustomPainter {
       debugPaintPadding(canvas, textSpanRect, textSpanRect.deflate(2));
     }
 
-    textPainter.text = TextSpan(
-      text: String.fromCharCode(icon.codePoint),
-      style: style.copyWith(
-        foreground: Paint()..shader = gradient.createShader(textSpanRect),
-      ),
-    );
-    textPainter.layout(minWidth: size.width, maxWidth: size.width);
-    textPainter.paint(canvas, textSpanRect.topLeft);
+    textPainter
+      ..text = TextSpan(
+        text: String.fromCharCode(icon.codePoint),
+        style: style.copyWith(
+          foreground: Paint()..shader = gradient.createShader(textSpanRect),
+        ),
+      )
+      ..layout(minWidth: size.width, maxWidth: size.width)
+      ..paint(canvas, textSpanRect.topLeft);
   }
 
   @override

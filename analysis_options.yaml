@@ -1,15 +1,1 @@
-include: package:flutter_lints/flutter.yaml
-
-linter:
-  rules:
-    - avoid_bool_literals_in_conditional_expressions
-    - avoid_escaping_inner_quotes
-    - avoid_positional_boolean_parameters
-    - flutter_style_todos
-    - one_member_abstracts
-    - parameter_assignments
-    - prefer_null_aware_method_calls
-    - require_trailing_commas
-    - use_is_even_rather_than_modulo
-    - use_named_constants
-    - use_to_and_as_if_applicable
+include: package:fd_lints/flutter.yaml

@@ -2,14 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:icon_decoration/src/gradient_icon.dart';
 import 'package:icon_decoration/src/icon_decoration.dart';
 
-/// Reimplementation of the [Icon] widget which adds support for shadows and
-/// borders trough its [decoration] property.
+/// Reimplementation of the [Icon] widget which adds support for borders and
+/// gradients trough its [decoration] property.
 class DecoratedIcon extends StatelessWidget {
+  const DecoratedIcon({
+    Key? key,
+    required this.icon,
+    this.decoration,
+  }) : super(key: key);
+
   final Icon icon;
   final IconDecoration? decoration;
-
-  const DecoratedIcon({Key? key, required this.icon, this.decoration})
-      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,18 +23,20 @@ class DecoratedIcon extends StatelessWidget {
     final iconOpacity = iconTheme.opacity ?? 1.0;
     final border = decoration?.border;
     final gradient = decoration?.gradient;
+    final shadows = icon.shadows;
+
     Color iconColor = icon.color ?? iconTheme.color!;
     if (iconOpacity != 1.0) {
       iconColor = iconColor.withOpacity(iconColor.opacity * iconOpacity);
     }
 
-    TextStyle iconStyle = TextStyle(
+    final TextStyle iconStyle = TextStyle(
       inherit: false,
       color: iconColor,
       fontSize: iconSize,
       fontFamily: iconData.fontFamily,
       package: iconData.fontPackage,
-      shadows: decoration?.shadows,
+      shadows: shadows,
     );
 
     Widget iconWidget = RichText(
@@ -67,7 +72,7 @@ class DecoratedIcon extends StatelessWidget {
       switch (textDirection) {
         case TextDirection.rtl:
           iconWidget = Transform(
-            transform: Matrix4.identity()..scale(-1.0, 1.0, 1.0),
+            transform: Matrix4.identity()..scale(-1.0, 1, 1),
             alignment: Alignment.center,
             transformHitTests: false,
             child: iconWidget,
@@ -106,7 +111,6 @@ class DecoratedIcon extends StatelessWidget {
                   ..strokeJoin = StrokeJoin.round
                   ..strokeWidth = border.width
                   ..color = border.color,
-                color: null,
               ),
             ),
           ),

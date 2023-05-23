@@ -1,3 +1,10 @@
+## 2.0.0
+
+* Removed `IconDecoration.shadows`, use `Icon.shadows` instead
+* Support for Dart 3
+* Upgraded dependencies
+* Updated linting
+
 ## 1.0.1
 
 * Fix gradient issue [#3](https://github.com/TesteurManiak/icon_decoration/issues/3)

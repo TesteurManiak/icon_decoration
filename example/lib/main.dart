@@ -6,7 +6,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,43 +25,39 @@ class MyApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  const DecoratedIcon(
+                  DecoratedIcon(
                     icon: Icon(
                       Icons.lightbulb_outline,
                       color: Colors.lightBlueAccent,
                       size: 36,
-                    ),
-                    decoration: IconDecoration(
                       shadows: [
                         Shadow(blurRadius: 3, color: Colors.lightBlueAccent),
                       ],
                     ),
                   ),
                   DecoratedIcon(
-                    icon: const Icon(
-                      Icons.lightbulb_outline,
-                      color: Colors.lightBlueAccent,
-                      size: 36,
-                    ),
-                    decoration: IconDecoration(shadows: [
-                      Shadow(
-                        blurRadius: 3,
-                        color: Colors.lightBlueAccent.shade100,
-                      ),
-                    ]),
+                    icon: Icon(Icons.lightbulb_outline,
+                        color: Colors.lightBlueAccent,
+                        size: 36,
+                        shadows: [
+                          Shadow(
+                            blurRadius: 3,
+                            color: Color.fromARGB(255, 128, 216, 255),
+                          ),
+                        ]),
                   ),
-                  const DecoratedIcon(
+                  DecoratedIcon(
                     icon: Icon(
                       Icons.lightbulb_outline,
                       color: Colors.lightBlueAccent,
                       size: 36,
+                      shadows: [
+                        Shadow(blurRadius: 2, color: Colors.lightBlueAccent),
+                      ],
                     ),
-                    decoration: IconDecoration(shadows: [
-                      Shadow(blurRadius: 2, color: Colors.lightBlueAccent),
-                    ]),
                   )
                 ],
               ),
@@ -73,60 +69,77 @@ class MyApp extends StatelessWidget {
                       Icons.home,
                       color: Colors.green.shade900,
                       size: 36,
+                      shadows: const [
+                        Shadow(color: Colors.yellowAccent, blurRadius: 3),
+                      ],
                     ),
-                    decoration: const IconDecoration(shadows: [
-                      Shadow(color: Colors.yellowAccent, blurRadius: 3),
-                    ]),
                   ),
                   DecoratedIcon(
                     icon: Icon(
                       Icons.home,
                       color: Colors.green.shade900,
                       size: 36,
+                      shadows: [
+                        Shadow(color: Colors.green.shade900, blurRadius: 3),
+                      ],
                     ),
-                    decoration: IconDecoration(shadows: [
-                      Shadow(color: Colors.green.shade900, blurRadius: 3),
-                    ]),
                   ),
                   DecoratedIcon(
                     icon: Icon(
                       Icons.home,
                       color: Colors.green.shade900,
                       size: 36,
+                      shadows: [
+                        Shadow(color: Colors.green.shade900, blurRadius: 2),
+                      ],
                     ),
-                    decoration: IconDecoration(shadows: [
-                      Shadow(color: Colors.green.shade900, blurRadius: 2),
-                    ]),
                   )
                 ],
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   DecoratedIcon(
-                    icon: const Icon(Icons.access_alarm, size: 36),
-                    decoration: IconDecoration(shadows: [
-                      Shadow(
-                          color: Colors.yellowAccent.shade400, blurRadius: 3),
-                    ]),
+                    icon: Icon(
+                      Icons.access_alarm,
+                      size: 36,
+                      shadows: [
+                        Shadow(
+                          color: Color.fromARGB(255, 255, 234, 0),
+                          blurRadius: 3,
+                        ),
+                      ],
+                    ),
                   ),
                   DecoratedIcon(
-                    icon: const Icon(Icons.access_alarm, size: 36),
-                    decoration: IconDecoration(shadows: [
-                      Shadow(color: Colors.red.shade400, blurRadius: 3),
-                    ]),
+                    icon: Icon(
+                      Icons.access_alarm,
+                      size: 36,
+                      shadows: [
+                        Shadow(
+                          color: Color.fromARGB(255, 239, 83, 80),
+                          blurRadius: 3,
+                        ),
+                      ],
+                    ),
                   ),
                   DecoratedIcon(
-                    icon: const Icon(Icons.access_alarm, size: 36),
-                    decoration: IconDecoration(shadows: [
-                      Shadow(color: Colors.cyanAccent.shade400, blurRadius: 3),
-                    ]),
+                    icon: Icon(
+                      Icons.access_alarm,
+                      size: 36,
+                      shadows: [
+                        Shadow(
+                          color: Color.fromARGB(255, 0, 229, 255),
+                          blurRadius: 3,
+                        ),
+                      ],
+                    ),
                   )
                 ],
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   DecoratedIcon(
                     icon: Icon(Icons.favorite, size: 36),
                     decoration: IconDecoration(
@@ -134,12 +147,15 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   DecoratedIcon(
-                    icon: Icon(Icons.favorite, size: 36),
-                    decoration: IconDecoration(
-                      border: IconBorder(color: Colors.red, width: 4),
+                    icon: Icon(
+                      Icons.favorite,
+                      size: 36,
                       shadows: [
                         Shadow(color: Colors.red, blurRadius: 6),
                       ],
+                    ),
+                    decoration: IconDecoration(
+                      border: IconBorder(color: Colors.red, width: 4),
                     ),
                   ),
                   DecoratedIcon(

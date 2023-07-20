@@ -4,7 +4,7 @@
 [![Test workflow](https://github.com/TesteurManiak/icon_decoration/actions/workflows/tests.yml/badge.svg)](https://github.com/TesteurManiak/icon_decoration/actions/workflows/tests.yml)
 [![Coverage Status](https://coveralls.io/repos/github/TesteurManiak/icon_decoration/badge.svg?branch=main)](https://coveralls.io/github/TesteurManiak/icon_decoration?branch=main)
 
-Add decoration capabilities for the `Icon` widget with shadows, borders, gradients. This new `DecoratedIcon` widget overlap itself with the base `Icon` widget to provide a more complete decoration system through a `IconDecoration` property.
+Add decoration capabilities to the `Icon` widget with borders and gradients. This new `DecoratedIcon` widget overlap itself with the base `Icon` widget to provide a more complete decoration system through a `IconDecoration` property.
 
 ## Table of contents
 
@@ -12,7 +12,6 @@ Add decoration capabilities for the `Icon` widget with shadows, borders, gradien
   - [Add dependency to your `pubspec.yaml`](#add-dependency-to-your-pubspecyaml)
   - [Import the package](#import-the-package)
 - [How to use](#how-to-use)
-  - [Add shadows to icons](#add-shadows-to-icons)
   - [Add borders to icons](#add-borders-to-icons)
   - [Add gradients to icons](#add-gradients-to-icons)
   - [Mix them all together](#mix-them-all-together)
@@ -34,19 +33,6 @@ import 'package:icon_decoration/icon_decoration.dart';
 ```
 
 ## How to use
-
-### Add shadows to icons
-
-![](https://github.com/TesteurManiak/icon_decoration/blob/main/screenshots/shadow_with_offset3_0.png)
-
-```dart
-DecoratedIcon(
-    icon: Icon(Icons.home, color: Colors.red),
-    decoration: IconDecoration(
-        shadows: [Shadow(blurRadius: 3, offset: Offset(3, 0))],
-    ),
-)
-```
 
 ### Add borders to icons
 
@@ -80,17 +66,19 @@ DecoratedIcon(
 
 ```dart
 DecoratedIcon(
-    icon: Icon(Icons.all_inbox),
-    decoration: IconDecoration(
-        gradient: _rainbowGradient,
-        border: IconBorder(),
+    icon: Icon(
+        Icons.all_inbox,
         shadows: [
             Shadow(
                 color: Colors.red,
                 blurRadius: 3,
                 offset: Offset(0, 2),
-            )
+            ),
         ],
+    ),
+    decoration: IconDecoration(
+        gradient: _rainbowGradient,
+        border: IconBorder(),
     ),
 )
 ```

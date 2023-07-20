@@ -1,3 +1,7 @@
+## 2.0.2
+
+* Fix README.md
+
 ## 2.0.1
 
 * Updated `README.md` with a "Migration Guide" section

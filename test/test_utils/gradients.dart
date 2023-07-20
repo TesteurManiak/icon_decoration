@@ -5,22 +5,12 @@ class RainbowGradient extends LinearGradient {
       : super(
           colors: const [
             Colors.red,
-            Colors.pink,
-            Colors.purple,
-            Colors.deepPurple,
-            Colors.deepPurple,
-            Colors.indigo,
-            Colors.blue,
-            Colors.lightBlue,
-            Colors.cyan,
-            Colors.teal,
-            Colors.green,
-            Colors.lightGreen,
-            Colors.lime,
-            Colors.yellow,
-            Colors.amber,
             Colors.orange,
-            Colors.deepOrange,
+            Colors.yellow,
+            Colors.green,
+            Colors.blue,
+            Colors.indigo,
+            Colors.purple,
           ],
         );
 }

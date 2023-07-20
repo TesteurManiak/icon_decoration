@@ -1,22 +1,22 @@
 name: icon_decoration
 description: Add decoration capabilities for the Icon widget with shadows,
   borders, gradients.
-version: 2.0.0
+version: 2.0.1
 homepage: https://github.com/TesteurManiak/icon_decoration
 repository: https://github.com/TesteurManiak/icon_decoration
 issue_tracker: https://github.com/TesteurManiak/icon_decoration/issues
 
 environment:
   sdk: ">=2.12.0 <4.0.0"
-  flutter: ">=1.17.0"
+  flutter: ">=2.10.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
 dev_dependencies:
-  alchemist: ^0.6.0
-  fd_lints: ^1.1.0
+  alchemist: ^0.6.1
+  fd_lints: ^2.1.0
   flutter_test:
     sdk: flutter
   meta: ^1.9.1

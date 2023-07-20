@@ -1,3 +1,10 @@
+## 2.0.1
+
+* Updated `README.md` with a "Migration Guide" section
+* Updated documentation
+* Added warning for gradients on Flutter Web
+* Upgraded dev dependencies
+
 ## 2.0.0
 
 * Removed `IconDecoration.shadows`, use `Icon.shadows` instead

@@ -6,6 +6,19 @@
 
 Add decoration capabilities for the `Icon` widget with shadows, borders, gradients. This new `DecoratedIcon` widget overlap itself with the base `Icon` widget to provide a more complete decoration system through a `IconDecoration` property.
 
+## Table of contents
+
+- [Add to your project](#add-to-your-project)
+  - [Add dependency to your `pubspec.yaml`](#add-dependency-to-your-pubspecyaml)
+  - [Import the package](#import-the-package)
+- [How to use](#how-to-use)
+  - [Add shadows to icons](#add-shadows-to-icons)
+  - [Add borders to icons](#add-borders-to-icons)
+  - [Add gradients to icons](#add-gradients-to-icons)
+  - [Mix them all together](#mix-them-all-together)
+- [Migration Guide](#migration-guide)
+  - [v2.0.0](#v200)
+
 ## Add to your project
 
 ### Add dependency to your `pubspec.yaml`
@@ -48,13 +61,15 @@ DecoratedIcon(
 
 ### Add gradients to icons
 
+**Gradients are supported on Flutter Web only with the [canvaskit renderer][flutter_web_renderer]**
+
 ![](https://github.com/TesteurManiak/icon_decoration/blob/main/screenshots/base_gradient.png)
 
 ```dart
 DecoratedIcon(
     icon: Icon(Icons.all_inbox),
     decoration: IconDecoration(
-        gradient: _rainbowGradient,
+        gradient: rainbowGradient,
     ),
 )
 ```
@@ -79,3 +94,43 @@ DecoratedIcon(
     ),
 )
 ```
+
+## Migration Guide
+
+### v2.0.0
+
+* Removed `IconDecoration.shadows`, use `Icon.shadows` instead.
+
+**Before**
+
+```dart
+DecoratedIcon(
+    icon: Icon(Icons.all_inbox),
+    decoration: IconDecoration(
+        shadows: [
+            Shadow(
+                color: Colors.red,
+                blurRadius: 3,
+                offset: Offset(0, 2),
+            ),
+        ],
+    ),
+)
+```
+
+**After**
+
+```dart
+Icon(
+    Icons.all_inbox,
+    shadows: [
+        Shadow(
+            color: Colors.red,
+            blurRadius: 3,
+            offset: Offset(0, 2),
+        ),
+    ],
+),
+```
+
+[flutter_web_renderer]: https://docs.flutter.dev/platform-integration/web/renderers

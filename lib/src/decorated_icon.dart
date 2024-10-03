@@ -6,10 +6,10 @@ import 'package:icon_decoration/src/icon_decoration.dart';
 /// gradients trough its [decoration] property.
 class DecoratedIcon extends StatelessWidget {
   const DecoratedIcon({
-    Key? key,
+    super.key,
     required this.icon,
     this.decoration,
-  }) : super(key: key);
+  });
 
   final Icon icon;
   final IconDecoration? decoration;
@@ -77,7 +77,6 @@ class DecoratedIcon extends StatelessWidget {
             transformHitTests: false,
             child: iconWidget,
           );
-          break;
         case TextDirection.ltr:
           break;
       }

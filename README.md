@@ -36,7 +36,7 @@ import 'package:icon_decoration/icon_decoration.dart';
 
 ### Add borders to icons
 
-![](https://github.com/TesteurManiak/icon_decoration/blob/main/screenshots/border_with_colorized_icon.png)
+<img src="https://raw.githubusercontent.com/TesteurManiak/icon_decoration/refs/heads/main/screenshots/border_with_colorized_icon.png">
 
 ```dart
 DecoratedIcon(
@@ -49,7 +49,7 @@ DecoratedIcon(
 
 **Gradients are supported on Flutter Web only with the [canvaskit renderer][flutter_web_renderer]**
 
-![](https://github.com/TesteurManiak/icon_decoration/blob/main/screenshots/base_gradient.png)
+<img src="https://raw.githubusercontent.com/TesteurManiak/icon_decoration/refs/heads/main/screenshots/base_gradient.png">
 
 ```dart
 DecoratedIcon(
@@ -62,7 +62,7 @@ DecoratedIcon(
 
 ### Mix them all together
 
-![](https://github.com/TesteurManiak/icon_decoration/blob/main/screenshots/gradient_with_border_and_shadow.png)
+<img src="https://raw.githubusercontent.com/TesteurManiak/icon_decoration/refs/heads/main/screenshots/gradient_with_border_and_shadow.png">
 
 ```dart
 DecoratedIcon(

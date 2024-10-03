@@ -3,13 +3,13 @@ import 'package:flutter/rendering.dart';
 
 class GradientIcon extends StatelessWidget {
   const GradientIcon({
-    Key? key,
+    super.key,
     required this.icon,
     required this.size,
     required this.gradient,
     required this.textDirection,
     required this.style,
-  }) : super(key: key);
+  });
 
   final IconData icon;
   final double size;

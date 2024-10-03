@@ -37,7 +37,7 @@ void main() {
                       color: Colors.red,
                       blurRadius: 3,
                       offset: Offset(0, 2),
-                    )
+                    ),
                   ],
                 ),
                 decoration: IconDecoration(

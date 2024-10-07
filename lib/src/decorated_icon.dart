@@ -23,7 +23,7 @@ class DecoratedIcon extends StatelessWidget {
     final iconOpacity = iconTheme.opacity ?? 1.0;
     final border = decoration?.border;
     final gradient = decoration?.gradient;
-    final shadows = icon.shadows;
+    final shadows = icon.shadows ?? iconTheme.shadows;
 
     Color iconColor = icon.color ?? iconTheme.color!;
     if (iconOpacity != 1.0) {

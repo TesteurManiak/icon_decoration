@@ -1,3 +1,14 @@
+## 2.1.0
+
+* Chore/bump dependencies by @TesteurManiak in https://github.com/TesteurManiak/icon_decoration/pull/6
+* Fallback to the shadows value of the IconTheme by @remi-denele in https://github.com/TesteurManiak/icon_decoration/pull/5
+* feat: update alchemist dependency by @TesteurManiak in https://github.com/TesteurManiak/icon_decoration/pull/7
+
+### New Contributors
+* @remi-denele made their first contribution in https://github.com/TesteurManiak/icon_decoration/pull/5
+
+**Full Changelog**: https://github.com/TesteurManiak/icon_decoration/compare/2.0.0...2.1.0
+
 ## 2.0.2
 
 * Fix README.md

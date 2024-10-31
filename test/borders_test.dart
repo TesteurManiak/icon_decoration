@@ -40,9 +40,7 @@ void main() {
                     ),
                   ],
                 ),
-                decoration: IconDecoration(
-                  border: IconBorder(),
-                ),
+                decoration: IconDecoration(border: IconBorder()),
               ),
             ),
           ],

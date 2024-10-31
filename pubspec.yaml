@@ -13,7 +13,10 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
-  alchemist: ^0.10.0
+  alchemist:
+    git:
+      url: https://github.com/Betterment/alchemist.git
+      ref: ab1f2eb49584339be119eaec28a5562f6b325cbc
   fd_lints: ^2.3.0
   flutter_test:
     sdk: flutter

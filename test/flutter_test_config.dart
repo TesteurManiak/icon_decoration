@@ -13,6 +13,7 @@ Future<void> testExecutable(FutureOr<void> Function() testMain) async {
         // ignore: avoid_redundant_argument_values
         enabled: !isRunningInCi,
       ),
+      ciGoldensConfig: const CiGoldensConfig(tolerance: 0.01),
     ),
     run: testMain,
   );

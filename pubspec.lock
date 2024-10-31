@@ -12,11 +12,12 @@ packages:
   alchemist:
     dependency: "direct dev"
     description:
-      name: alchemist
-      sha256: "2fcd35d7422070cdf7f276bc04dd2d38c9164adb7d58bd00b7bebd8b6927d112"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.10.0"
+      path: "."
+      ref: ab1f2eb49584339be119eaec28a5562f6b325cbc
+      resolved-ref: ab1f2eb49584339be119eaec28a5562f6b325cbc
+      url: "https://github.com/Betterment/alchemist.git"
+    source: git
+    version: "0.7.0"
   analyzer:
     dependency: transitive
     description:
@@ -392,6 +393,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.2"
+  universal_io:
+    dependency: transitive
+    description:
+      name: universal_io
+      sha256: "1722b2dcc462b4b2f3ee7d188dad008b6eb4c40bbd03a3de451d82c78bba9aad"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.2"
   uuid:
     dependency: transitive
     description:

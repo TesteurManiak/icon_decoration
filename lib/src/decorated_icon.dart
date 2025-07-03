@@ -27,7 +27,7 @@ class DecoratedIcon extends StatelessWidget {
 
     Color iconColor = icon.color ?? iconTheme.color!;
     if (iconOpacity != 1.0) {
-      iconColor = iconColor.withAlpha(iconColor.a.toInt());
+      iconColor = iconColor.withAlpha((iconColor.a * iconOpacity).toInt());
     }
 
     final TextStyle iconStyle = TextStyle(
